@@ -16,7 +16,7 @@
 |採图标|otohime.cai.ico|18.02.20|amd64、arm64|[点击](https://github.com/kota-rina3/hokeshi/releases/tag/caiico18 "点击")|
 |字符映射表NG|otohime.charmap|5.2.3668.0|amd64|[点击](https://github.com/kota-rina3/charmap-ng/releases/tag/5.2.3668.0 "点击")|
 |爱奇艺 for linux|com.iqiyi.otohime|14.4.5.9968|amd64、arm64、loong64|[点击](https://github.com/kota-rina3/hokeshi/releases/tag/iqiyi14.4.5 "点击")|
-|腾讯视频Linux版 Re:Birth|tenvideo-universal|11.164.9775.0|amd64、arm64、loong64|[点击](https://github.com/kota-rina3/hokeshi/releases/tag/tenvideo-v11 "点击")|
+|腾讯视频Linux版 Re:Birth|tenvideo-universal|11.178.5334.0|amd64、arm64、loong64|[点击](https://github.com/kota-rina3/hokeshi/releases/tag/tenvideo-v11.178.5334.0 "点击")|
 |PDF试卷切题工具|pdf-to-ppt-tool|2.5|amd64、arm64、loong64|[点击](https://github.com/kota-rina3/hokeshi/releases/tag/pdf2ppt-2.5 "点击")|
 |国家中小学智慧教育平台|zxxedu|1.3.11|amd64、arm64、loong64|[点击](https://github.com/kota-rina3/hokeshi/releases/tag/zxxedu1.3.11 "点击")|
 |QQ音乐|com.qq.music|1.1.8.3|amd64、arm64、loong64|[点击](https://github.com/kota-rina3/hokeshi/releases/tag/qqmusic1.1.8.3 "点击") |
