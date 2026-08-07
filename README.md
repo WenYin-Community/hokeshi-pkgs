@@ -12,7 +12,7 @@
 |小丑牌|balatro-linux|1.1.0|amd64、arm64、loong64|[点击](https://github.com/kota-rina3/hokeshi/releases/tag/balatro-linux1.1.0 "点击")|
 |千问客户端 for linux|com.qianwen.otohime|3.7.5.145|amd64、arm64、loong64|[点击](https://github.com/kota-rina3/hokeshi/releases/tag/qwen-linux-3.7.5.145 "点击")|
 |千问客户端国际版 for linux|ai.qwen.otohime|1.0.3|amd64、arm64、loong64|[点击](https://github.com/kota-rina3/hokeshi/releases/tag/qwen-global-1.0.3 "点击")|
-|Deepin-Wine转区工具|otohime.deepin-wine.localemulator|3.4|amd64|[点击](https://github.com/kota-rina3/dwle/releases/tag/v3.4 "点击")|
+|Deepin-Wine转区工具|otohime.deepin-wine.localemulator|3.6|amd64|[点击](https://github.com/kota-rina3/dwle/releases/tag/v3.6 "点击")|
 |採图标|otohime.cai.ico|18.02.20|amd64、arm64|[点击](https://github.com/kota-rina3/hokeshi/releases/tag/caiico18 "点击")|
 |字符映射表NG|otohime.charmap|5.2.3668.0|amd64|[点击](https://github.com/kota-rina3/charmap-ng/releases/tag/5.2.3668.0 "点击")|
 |爱奇艺 for linux|com.iqiyi.otohime|14.4.5.9968|amd64、arm64、loong64|[点击](https://github.com/kota-rina3/hokeshi/releases/tag/iqiyi14.4.5 "点击")|
