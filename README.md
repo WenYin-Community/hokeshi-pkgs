@@ -26,4 +26,5 @@
 |腾讯元宝|com.tencent.yuanbao.otohime|2.79|amd64、arm64、loong64|[点击](https://github.com/kota-rina3/hokeshi/releases/tag/yuanbao2.79 "点击")|
 |小丸工具箱粉丝重制版 for Linux|maruko.toolbox.rewrite|1.1.2|amd64、arm64、loong64|[点击](https://github.com/kota-rina3/MarukoToolbox-Rewrite-Linux/releases/tag/1.1.2 "点击")|
 |观潮台|dowjones.guanchaotai.otohime|2.0.0|amd64、arm64、loong64|[点击](https://github.com/kota-rina3/hokeshi/releases/tag/guanchaotai-2.0 "点击")|
+|lossless-cut无损剪辑|github.mifi.losslesscut|3.69.0|amd64、arm64、loong64|[点击](https://github.com/kota-rina3/hokeshi/releases/tag/losslesscut-v3.69.0 "点击")|
 |  ？ | ？  |  ？ |  ？ |？|
