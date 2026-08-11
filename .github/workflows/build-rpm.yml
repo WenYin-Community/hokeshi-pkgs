@@ -1,0 +1,50 @@
+name: Build RPMs
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build-rpm:
+    runs-on: ubuntu-latest
+    container: fedora:latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install dependencies
+        run: |
+          dnf install -y --setopt=install_weak_deps=False \
+            git curl jq gh rpm-build binutils tar xz file desktop-file-utils
+
+      - name: Prepare workspace for builder user
+        run: |
+          git config --global --add safe.directory "$GITHUB_WORKSPACE"
+          useradd builder
+          chown -R builder:builder .
+
+      - name: Fetch latest amd64 debs from upstream
+        run: tools/fetch-debs.sh
+
+      - name: Convert debs to rpms
+        run: su builder -s /bin/bash -c 'tools/deb2rpm.sh amd64-deb -o rpms'
+
+      - name: Verify rpms
+        run: |
+          shopt -s nullglob
+          for r in rpms/*.rpm; do
+            echo "--- $(basename "$r") ---"
+            file "$r"
+            rpm -qip "$r" | sed -n '1,20p'
+          done
+
+      - name: Publish release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          TAG="rpm-$(date +%Y%m%d-%H%M%S)"
+          gh release create "$TAG" rpms/*.rpm \
+            --title "RPM 构建 $(date +%F %T)" \
+            --notes "由 tools/deb2rpm.sh 将上游 amd64 .deb 自动转换为 .rpm（x86_64）"
