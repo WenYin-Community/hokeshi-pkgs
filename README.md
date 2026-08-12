@@ -1,6 +1,8 @@
 # hokeshi-pkgs
 
-deepin-wine 风格应用的 RPM 与 Arch 包仓库。由 GitHub Actions 将上游提供的 .deb（amd64）自动转换为 Fedora / RHEL 系可用的 .rpm 与 Arch Linux 可用的 .pkg.tar.zst（x86_64），构建完成后自动发布到 [Releases](https://github.com/WenYin-Community/hokeshi-pkgs/releases)。
+deepin 风格应用的 Linux 原生版本 RPM 与 Arch 包仓库。由 GitHub Actions 将上游提供的 .deb（amd64）自动转换为 Fedora / RHEL 系可用的 .rpm 与 Arch Linux 可用的 .pkg.tar.zst（x86_64），构建完成后自动发布到 [Releases](https://github.com/WenYin-Community/hokeshi-pkgs/releases)。
+
+> 这些软件包为 Linux 原生版本（多为 Electron / Web 封装），并非 Wine 运行 Windows 程序，仅借用了 deepin 应用包格式（`/opt/apps` 目录结构）。
 
 > 觉得好用请给个star吧~！若有问题或建议，请开issue或来Q群634133484
 
