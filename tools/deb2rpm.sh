@@ -182,7 +182,9 @@ convert_one() {
   echo "  生成 spec: Name=$pkg Version=$rpmver Arch=$rpmarch"
 
   if ! rpmbuild --define "_topdir $work/rpmbuild" --target "$rpmarch" -bb "$out_spec" > "$work/build.log" 2>&1; then
-    echo "  构建失败: $name（日志: $work/build.log）" >&2
+    echo "  构建失败: $name，build.log 内容如下：" >&2
+    sed 's/^/    /' "$work/build.log" >&2
+    cp "$work/build.log" "$OUT/${name%.deb}.build.log"
     return 1
   fi
 
