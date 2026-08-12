@@ -1,0 +1,25 @@
+# 上游 deepin-wine 风格应用的 GitHub Release 页面（每行一个，下载最新 amd64 deb）
+# 由 tools/fetch-debs.sh 读取；包名更新时在此维护
+https://github.com/kota-rina3/hokeshi/releases/tag/wechat-kages-4.0
+https://github.com/kota-rina3/hokeshi/releases/tag/easinote5-20251204
+https://github.com/kota-rina3/hokeshi/releases/tag/douyin8.3.0
+https://github.com/kota-rina3/hokeshi/releases/tag/NeteaseCloudMusic3.1.34
+https://github.com/kota-rina3/hokeshi/releases/tag/hbknana-ng
+https://github.com/kota-rina3/hokeshi/releases/tag/balatro-linux1.1.0
+https://github.com/kota-rina3/hokeshi/releases/tag/qwen-linux-3.7.5.145
+https://github.com/kota-rina3/hokeshi/releases/tag/qwen-global-1.0.3
+https://github.com/kota-rina3/dwle/releases/tag/v3.6
+https://github.com/kota-rina3/hokeshi/releases/tag/caiico22
+https://github.com/kota-rina3/charmap-ng/releases/tag/5.2.3670.0
+https://github.com/kota-rina3/hokeshi/releases/tag/iqiyi14.4.5
+https://github.com/kota-rina3/hokeshi/releases/tag/tenvideo-v11.178.5334.0
+https://github.com/kota-rina3/hokeshi/releases/tag/pdf2ppt-2.5
+https://github.com/kota-rina3/hokeshi/releases/tag/zxxedu1.3.11
+https://github.com/kota-rina3/hokeshi/releases/tag/qqmusic1.1.8.3
+https://github.com/kota-rina3/hokeshi/releases/tag/lanzou4.0.0
+https://github.com/kota-rina3/hokeshi/releases/tag/yuque4.2.1.1333
+https://github.com/kota-rina3/hokeshi/releases/tag/moekoe1.6.8
+https://github.com/kota-rina3/hokeshi/releases/tag/yuanbao2.79
+https://github.com/kota-rina3/MarukoToolbox-Rewrite-Linux/releases/tag/1.1.2
+https://github.com/kota-rina3/hokeshi/releases/tag/guanchaotai-2.0
+https://github.com/kota-rina3/hokeshi/releases/tag/losslesscut-v3.69.0

@@ -11,9 +11,9 @@ done
 
 mkdir -p amd64-deb
 
-# 提取 README 中 github.com/OWNER/REPO/releases/tag/TAG 形式的链接
-urls=$(grep -oE 'https://github\.com/[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+/releases/tag/[A-Za-z0-9_.-]+' README.md | sort -u)
-[[ -z "$urls" ]] && { echo "错误: README.md 中未找到上游 release 链接" >&2; exit 1; }
+# 提取 tools/upstream-urls.txt 中的上游 release 链接（忽略 # 注释行与空行）
+urls=$(sed '/^[[:space:]]*#/d; /^[[:space:]]*$/d' tools/upstream-urls.txt)
+[[ -z "$urls" ]] && { echo "错误: tools/upstream-urls.txt 中未找到上游 release 链接" >&2; exit 1; }
 
 count=0
 while IFS= read -r url; do
