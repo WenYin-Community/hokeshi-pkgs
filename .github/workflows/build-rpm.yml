@@ -49,5 +49,6 @@ jobs:
         run: |
           TAG="rpm-$(date +%Y%m%d-%H%M%S)"
           gh release create "$TAG" rpms/*.rpm \
-            --title "RPM 构建 $(date +%F %T)" \
+            --repo "$GITHUB_REPOSITORY" \
+            --title "RPM 构建 $(date "+%F %T")" \
             --notes "由 tools/deb2rpm.sh 将上游 amd64 .deb 自动转换为 .rpm（x86_64）"
