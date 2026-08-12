@@ -9,6 +9,9 @@ set -euo pipefail
 export LANG=C.UTF-8
 export LC_ALL=C.UTF-8
 
+# 第三方自包含包常含指向打包者本机构建路径的 RPATH，跳过 rpm 的 RPATH 检查
+export QA_RPATHS=0x3f
+
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 MAPPING="$SCRIPT_DIR/fedora-mapping.tsv"
 
@@ -93,15 +96,16 @@ generate_files() {
         sub(/\/[^\/]*$/, "", d)
       }
     }
+    function esc(s) { gsub(/ /, "\\ ", s); return s }
     {
       p = $0
       sub(/^\.\//, "", p)
       if (p == "" || p == ".") next
       if (p ~ /\/$/) { sub(/\/$/, "", p); dirs[p]=1; mark(p) }
-      else { print "/" p; mark(p) }
+      else { print "/" esc(p); mark(p) }
     }
     END {
-      for (d in dirs) if (!(d in nonempty) && d != "") print "%dir /" d
+      for (d in dirs) if (!(d in nonempty) && d != "") print "%dir /" esc(d)
     }' | sort -u
 }
 
