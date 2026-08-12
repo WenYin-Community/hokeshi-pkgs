@@ -41,3 +41,13 @@ sudo dnf install ./包名.rpm
 | 小丸工具箱粉丝重制版 for Linux | maruko.toolbox.rewrite | 1.1.2 | amd64、arm64、loong64 | [点击](https://github.com/WenYin-Community/hokeshi-pkgs/releases/download/rpm-20260812-052901/maruko.toolbox.rewrite-1.1.2-1.x86_64.rpm "点击") |
 | 观潮台 | dowjones.guanchaotai.otohime | 2.0.0 | amd64、arm64、loong64 | [点击](https://github.com/WenYin-Community/hokeshi-pkgs/releases/download/rpm-20260812-052901/dowjones.guanchaotai.otohime-2.0-1.x86_64.rpm "点击") |
 | lossless-cut无损剪辑 | github.mifi.losslesscut | 3.69.0 | amd64、arm64、loong64 | [点击](https://github.com/WenYin-Community/hokeshi-pkgs/releases/download/rpm-20260812-052901/github.mifi.losslesscut-3.69.0-1.x86_64.rpm "点击") |
+
+## 致谢
+
+本仓库的软件包均基于以下上游项目提供的 .deb 自动转换而来，感谢上游作者的辛勤维护：
+
+- [kota-rina3/hokeshi](https://github.com/kota-rina3/hokeshi)：deepin-wine 风格应用的主仓库
+- [kota-rina3/dwle](https://github.com/kota-rina3/dwle)：Deepin-Wine 转区工具
+- [kota-rina3/charmap-ng](https://github.com/kota-rina3/charmap-ng)：字符映射表
+- [kota-rina3/MarukoToolbox-Rewrite-Linux](https://github.com/kota-rina3/MarukoToolbox-Rewrite-Linux)：小丸工具箱粉丝重制版
+
