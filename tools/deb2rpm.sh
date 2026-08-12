@@ -4,6 +4,11 @@
 # 依赖: ar、tar、xz、rpmbuild（Fedora 无需 dpkg）
 set -euo pipefail
 
+# 强制 UTF-8 locale：rpmbuild 需 UTF-8 才能正确处理中文等非 ASCII 文件名
+# （CI 的 fedora 容器默认 C locale 会导致 %install/%files 中文路径匹配失败）
+export LANG=C.UTF-8
+export LC_ALL=C.UTF-8
+
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 MAPPING="$SCRIPT_DIR/fedora-mapping.tsv"
 

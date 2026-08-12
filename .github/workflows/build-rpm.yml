@@ -29,6 +29,9 @@ jobs:
         run: tools/fetch-debs.sh
 
       - name: Convert debs to rpms
+        env:
+          LANG: C.UTF-8
+          LC_ALL: C.UTF-8
         run: su builder -s /bin/bash -c 'tools/deb2rpm.sh amd64-deb -o rpms'
 
       - name: Verify rpms
