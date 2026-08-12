@@ -1,3 +1,5 @@
 amd64-deb/
 rpms/
 rpms-test*/
+arch-pkg*/
+.verify/

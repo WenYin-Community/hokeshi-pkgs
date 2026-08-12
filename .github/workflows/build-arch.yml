@@ -1,0 +1,48 @@
+name: Build Arch packages
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build-arch:
+    runs-on: ubuntu-latest
+    container: archlinux:latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install dependencies
+        run: |
+          pacman -Syu --noconfirm --needed \
+            git curl jq github-cli binutils tar xz zstd libarchive file
+
+      - name: Fetch latest amd64 debs from upstream
+        run: tools/fetch-debs.sh
+
+      - name: Convert debs to Arch packages
+        env:
+          LANG: C.UTF-8
+          LC_ALL: C.UTF-8
+        run: tools/deb2arch.sh amd64-deb -o arch-pkg
+
+      - name: Verify packages
+        run: |
+          shopt -s nullglob
+          for p in arch-pkg/*.pkg.tar.zst; do
+            echo "--- $(basename "$p") ---"
+            file "$p"
+            bsdtar -xOf "$p" .PKGINFO | grep -E '^(pkgname|pkgver|arch|depend)'
+          done
+
+      - name: Publish release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          TAG="arch-$(date +%Y%m%d-%H%M%S)"
+          gh release create "$TAG" arch-pkg/*.pkg.tar.zst \
+            --repo "$GITHUB_REPOSITORY" \
+            --title "Arch 构建 $(date "+%F %T")" \
+            --notes "由 tools/deb2arch.sh 将上游 amd64 .deb 自动转换为 Arch .pkg.tar.zst（x86_64）"

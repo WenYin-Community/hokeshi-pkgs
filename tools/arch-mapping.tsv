@@ -1,0 +1,15 @@
+# deb 包名 → Arch 包名 映射表（Tab 分隔）
+# 用于将上游 .deb 的 Depends 转换为 Arch .PKGINFO 的 depend
+# 用 Arch 容器内 `pacman -Si` 校验（2026-08-12）
+libgtk-3-0	gtk3
+libnss3	nss
+libnotify4	libnotify
+libsecret-1-0	libsecret
+libuuid1	util-linux-libs
+libxss1	libxss
+libxtst6	libxtst
+libatspi2.0-0	at-spi2-core
+libappindicator3-1	libayatana-appindicator
+python3-tk	tk
+xdg-utils	xdg-utils
+ffmpeg	ffmpeg
